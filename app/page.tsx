@@ -1,17 +1,7 @@
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNav";  
 import { Grid } from "@/components/Grid";
-
-const navItems = [
-  { name: "Home", link: "/", iconName: "Home" },
-  { name: "About", link: "/about", iconName: "User" },
-  { name: "Education", link: "/education", iconName: "GraduationCap" },
-  { name: "Experience", link: "/experience", iconName: "Briefcase" },
-  { name: "Skills", link: "/skills", iconName: "Code2" },
-  { name: "Projects", link: "/projects", iconName: "FolderGit2" },
-  { name: "Resume", link: "/assets/resumes/resume.pdf", iconName: "FileText" },
-  { name: "Contact", link: "/contact", iconName: "Mail" }
-];
+import { navItems } from "@/data";
 
 export default function Home() {
   return (
