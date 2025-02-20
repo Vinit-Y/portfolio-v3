@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
@@ -5,6 +6,11 @@ import { MagicButton } from './ui/MagicButton'
 import { PiReadCvLogoBold } from 'react-icons/pi'
 
 const Hero = () => {
+
+  const handleResumeClick = () => {
+    window.open(`https://docs.google.com/viewer?url=${encodeURIComponent(process.env.NEXT_PUBLIC_SITE_URL + '/assets/resumes/resume.pdf')}&embedded=true`, '_blank', 'noopener,noreferrer');
+  }
+  
   return (
     <div className="pb-20 pt-36">
 
@@ -27,6 +33,7 @@ const Hero = () => {
             <MagicButton 
               title="View Resume" 
               icon={<PiReadCvLogoBold/>}
+              handleClick={handleResumeClick}
             />
           </a>
         </div>
