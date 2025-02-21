@@ -52,11 +52,13 @@ export const BentoGridItem = ({
   titleClassName?: string;
 }) => {
   const [copied, setCopied] = useState(false);
+  const [animationKey, setAnimationKey] = useState('static-key');
 
   const handleCopy = () => {
     navigator.clipboard.writeText('yadav.vini@northeastern.edu')
       .then(() => {
         setCopied(true);
+        setAnimationKey(Date.now().toString());
         setTimeout(() => {
           setCopied(false);
         }, 3000);
@@ -77,7 +79,7 @@ export const BentoGridItem = ({
         backgroundColor: 'radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(55,55,189,1) 56%, rgba(0,212,255,1) 100%)',
       }}
     >
-      <div className={`${id === 6} && 'flex justify-center h-full'`}>
+      <div className={`${id === 6 && 'flex justify-center'} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
             <img
@@ -136,16 +138,17 @@ export const BentoGridItem = ({
         { id === 6 && (
           <div className="mt-5 relative">
             <div className={`absolute -bottom-5 right-0`} style={{ zIndex: -1 }}>
-              <Lottie options={
-                {
-                  loop: copied,
-                  autoplay: copied,
+              <Lottie 
+                key={animationKey}
+                options={{
+                  loop: false,
+                  autoplay: true,
                   animationData: animationData,
                   rendererSettings: {
                     preserveAspectRatio: 'xMidYMid slice'
                   }
-                }
-              }/>
+                }}
+              />
             </div>
             <MagicButton 
               title={copied ? 'Email Copied' : 'Copy my Email'}
