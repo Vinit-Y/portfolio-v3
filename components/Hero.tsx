@@ -29,7 +29,7 @@ const Hero = () => {
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">Welcome To My Portfolio</h2>
           <TextGenerateEffect className="text-center text-[40px] md:text-5xl lg:text-6xl xl:text-7xl font-bold" words="Hi, I&apos;m Vinit, a Software Engineer with a passion for building dynamic and scalable applications." duration={1} filter={true}/>
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl xl:text-3xl">Hi, I&apos;m Vinit, a Software Engineer with a passion for building dynamic and scalable applications.</p>
-          <a href="#projects">
+          <a>
             <MagicButton 
               title="View Resume" 
               icon={<PiReadCvLogoBold/>}

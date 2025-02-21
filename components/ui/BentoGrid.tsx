@@ -53,18 +53,17 @@ export const BentoGridItem = ({
 }) => {
   const [copied, setCopied] = useState(false);
 
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText('yadav.vini@northeastern.edu');
-      console.log('Email copied');
-      setCopied(true);
-      // Reset the copied state after animation
-      setTimeout(() => {
-        setCopied(false);
-      }, 4000);
-    } catch (err) {
-      console.error('Failed to copy:', err);
-    }
+  const handleCopy = () => {
+    navigator.clipboard.writeText('yadav.vini@northeastern.edu')
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => {
+          setCopied(false);
+        }, 3000);
+      })
+      .catch(err => {
+        console.error('Failed to copy: ', err);
+      });
   };
 
   return (
@@ -136,14 +135,14 @@ export const BentoGridItem = ({
         )}
         { id === 6 && (
           <div className="mt-5 relative">
-            <div className={`absolute -bottom-5 right-0`}>
+            <div className={`absolute -bottom-5 right-0`} style={{ zIndex: -1 }}>
               <Lottie options={
                 {
                   loop: copied,
                   autoplay: copied,
                   animationData: animationData,
                   rendererSettings: {
-                  preserveAspectRatio: 'xMidYMid slice'
+                    preserveAspectRatio: 'xMidYMid slice'
                   }
                 }
               }/>
