@@ -12,7 +12,7 @@ const Hero = () => {
   }
   
   return (
-    <div className="pb-20 pt-36">
+    <div className="pb-20 pt-20">
 
       <div>
         <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white"/>
@@ -26,9 +26,14 @@ const Hero = () => {
 
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-4xl xl:max-w-5xl flex flex-col items-center justify-center">
-          <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">Welcome To My Portfolio</h2>
-          <TextGenerateEffect className="text-center text-[40px] md:text-5xl lg:text-6xl xl:text-7xl font-bold" words="Hi, I&apos;m Vinit, a Software Engineer with a passion for building dynamic and scalable applications." duration={1} filter={true}/>
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl xl:text-3xl">Hi, I&apos;m Vinit, a Software Engineer with a passion for building dynamic and scalable applications.</p>
+          <h2 className="uppercase tracking-widest text-lg text-center text-blue-100">Full-Stack Developer | Software Engineer | AI Enthusiast</h2>
+          <TextGenerateEffect className="text-center text-[20px] md:text-5xl lg:text-6xl xl:text-7xl font-bold" words="Focused on Building Dynamic and Scalable Applications that Deliver High Performance" duration={1.5} filter={true}/>
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl xl:text-3xl">Hi👋, I&apos;m Vinit, Thanks for checking out my portfolio! I’m Vinit, a Full Stack Developer currently pursuing my Master’s in Information Systems at Northeastern University (graduating May 2025). I hold a Bachelor’s in Computer Engineering from the University of Mumbai.</p>
+
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl xl:text-3xl">My experiences have equipped me with the skills and mindset to tackle challenges head-on and deliver impactful results. Whether it’s architecting cloud solutions, enhancing application performance, or creating seamless user interfaces, I’m passionate about using technology to drive meaningful outcomes.</p>
+
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl xl:text-3xl">Feel free to reach out via this form or email me at <a href="mailto:vinit.k.patil@northeastern.edu" className="text-blue-500 hover:text-blue-600">vinit.k.patil@northeastern.edu</a>.</p>
+
           <a>
             <MagicButton 
               title="View Resume" 
@@ -38,7 +43,6 @@ const Hero = () => {
           </a>
         </div>
       </div>
-
     </div>
   )
 }
