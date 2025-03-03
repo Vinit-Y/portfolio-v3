@@ -8,7 +8,16 @@ import { PiReadCvLogoBold } from 'react-icons/pi'
 const Hero = () => {
 
   const handleResumeClick = () => {
-    window.open(`https://docs.google.com/viewer?url=${encodeURIComponent(process.env.NEXT_PUBLIC_SITE_URL + '/assets/resumes/resume.pdf')}&embedded=true`, '_blank', 'noopener,noreferrer');
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+    console.log('Site URL:', siteUrl); // Debug log
+    
+    const pdfUrl = `${siteUrl}/public/assets/resumes/resume.pdf`;
+    console.log('PDF URL:', pdfUrl); // Debug log
+    
+    const viewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(pdfUrl)}&embedded=true`;
+    console.log('Viewer URL:', viewerUrl); // Debug log
+    
+    window.open(viewerUrl, '_blank', 'noopener,noreferrer');
   }
   
   return (
@@ -27,13 +36,8 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-4xl xl:max-w-5xl flex flex-col items-center justify-center">
           <h2 className="uppercase tracking-widest text-lg text-center text-blue-100">Full-Stack Developer | Software Engineer | AI Enthusiast</h2>
-          <TextGenerateEffect className="text-center text-[20px] md:text-5xl lg:text-6xl xl:text-7xl font-bold" words="Focused on Building Dynamic and Scalable Applications that Deliver High Performance" duration={1.5} filter={true}/>
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl xl:text-3xl">Hi👋, I&apos;m Vinit, Thanks for checking out my portfolio! I’m Vinit, a Full Stack Developer currently pursuing my Master’s in Information Systems at Northeastern University (graduating May 2025). I hold a Bachelor’s in Computer Engineering from the University of Mumbai.</p>
-
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl xl:text-3xl">My experiences have equipped me with the skills and mindset to tackle challenges head-on and deliver impactful results. Whether it’s architecting cloud solutions, enhancing application performance, or creating seamless user interfaces, I’m passionate about using technology to drive meaningful outcomes.</p>
-
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl xl:text-3xl">Feel free to reach out via this form or email me at <a href="mailto:vinit.k.patil@northeastern.edu" className="text-blue-500 hover:text-blue-600">vinit.k.patil@northeastern.edu</a>.</p>
-
+          <TextGenerateEffect className="text-center text-[20px] md:text-4xl lg:text-5xl xl:text-6xl font-bold" words="Focused on Building Dynamic and Scalable Applications that Deliver High Performance" duration={1.5} filter={true}/>
+          <p className="text-center md:tracking-wider mt-5 mb-5 text-sm md:text-lg lg:text-xl xl:text-2xl">Hi👋, I&apos;m  Vinit—thanks for checking out my portfolio! With 2+ years of experience and 20+ projects built, I thrive on transforming ideas into real-world solutions that create impact. Whether it's streamlining workflows, enhancing user engagement, or driving innovation, I focus on building technology that solves problems and delivers value. My background in Computer Engineering and Information Systems equips me to take on challenges, push boundaries, and continuously innovate. Always eager to learn and build, I’m passionate about using technology to make a meaningful difference.</p>
           <a>
             <MagicButton 
               title="View Resume" 
