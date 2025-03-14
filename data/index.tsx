@@ -78,7 +78,7 @@ export const projects = [
     id: 1,
     title: "ICE Tracker",
     des: "Building ICE Tracker: A heatmap of ICE arrests in Massachusetts with an AI-powered chatbot and call-based immigration assistance.",
-    img: "/p1.svg",
+    img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "https://github.com/Vinit-Y/ICE_Tracker.git",
   },
