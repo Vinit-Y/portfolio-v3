@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const navItems = [
   { name: "Home", link: "/", iconName: "Home" },
   { name: "About", link: "#about", iconName: "User" },
@@ -80,32 +82,64 @@ export const projects = [
     des: "Building ICE Tracker: A heatmap of ICE arrests in Massachusetts with an AI-powered chatbot and call-based immigration assistance.",
     img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/Vinit-Y/ICE_Tracker.git",
+    link: "https://github.com/Vinit-Y/ICE_Tracker",
   },
   {
     id: 2,
-    title: "GrubBites",
-    des: "GrubBites, an innovative online food ordering platform, was developed with the goal of enhancing user experience and simplifying the food ordering process. The project focuses on streamlining the order placement, providing users with exclusive offers, and making it convenient for both customers and restaurant owners.`",
+    title: "Assignment Management System",
+    des: "An Assignment Management System built with Node.js and Express.js, featuring user authentication, AWS and GCP infrastructure, Packer for image creation, GitHub Actions for CI/CD, Jest for testing, Winston logging, CSV processing for user accounts, and Sequelize for database management.",
     img: "/p2.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    link: "https://github.com/Vinit-Y/webapp",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    title: "GrubBites - Food Ordering App",
+    des: "​GrubBites is an online food ordering platform designed to simplify the ordering process and enhance user experience. The application is built using React for the frontend, and Node.js, Express.js, and MongoDB for the backend. It integrates Stripe for secure payments and is deployed on Heroku.",
+    img: "/p2.svg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    link: "https://github.com/Vinit-Y/GrubBites",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
+    title: "City Management System",
+    des: "The City Management System is a Java-based app using Java Swing, MySQL, Hibernate, and JDBC to manage city services like employment, healthcare, and education. Built in IntelliJ IDEA and NetBeans, it applies object-oriented programming and data-driven solutions while addressing cost and privacy challenges.",
+    img: "/p3.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    link: "https://github.com/Vinit-Y/AED_FINAL_PROJECT",
+  },
+  { 
+    id: 5,
+    title: "Insurance-Plan-Service",
+    des: "The project focuses on distributed systems and big data indexing. It uses Elasticsearch for efficient search and data indexing, Kibana for visualization and monitoring, and RabbitMQ for reliable message queuing and communication. The project simplifies deployment and management for scalable data processing.",
+    img: "/p4.svg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],  // change to p5.svg
+    link: "https://github.com/Vinit-Y/Insurance-Plan-Service",
+  },
+  {
+    id: 6,
+    title: "TechHub-E-commerce-App",
+    des: "The TechHub E-commerce App is a computer sales platform built with ReactJS, Redux, Bootstrap, and SCSS for a dynamic UI, and ExpressJS with MongoDB for backend services. It integrates Stripe for secure payments and is deployed on Heroku, ensuring a seamless shopping experience.",
+    img: "/p5.svg", // change to p5.svg
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],  // change to p5.svg
+    link: "https://github.com/Vinit-Y/TechHub-E-commerce-App",
+  },
+  {
+    id: 7,
+    title: "FlashLearn - A Flashcard App",
+    des: "Webapp designed to facilitate interactive learning through flashcards. The application provides users with the opportunity to enhance their knowledge of JavaScript or Java programming languages through engaging quizzes and scoring mechanisms.",
     img: "/p4.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    link: "https://github.com/Vinit-Y/FlashLearn",
   },
+  {
+    id: 8,
+    title: "Current Portfolio Website",
+    des: "A modern and responsive portfolio website built with TypeScript, React, Next.js, Three.js, Tailwind CSS, Aceternity UI, Shadcn, Framer Motion, and Sentry.",
+    img: "/p5.svg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://github.com/Vinit-Y/portfolio-v3",
+  }
 ];
 
 export const testimonials = [
