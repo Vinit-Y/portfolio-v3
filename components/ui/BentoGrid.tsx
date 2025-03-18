@@ -115,10 +115,28 @@ export const BentoGridItem = ({
 
         { id === 2 && <GlobeDemo />}
 
+        { id === 3 && (
+          <div className="flex flex-wrap gap-3">
+            {[
+              { text: "2+ years of experience", emoji: "💼" },
+              { text: "20+ projects built", emoji: "🚀" },
+              { text: "Candid Street Photographer", emoji: "📷" },
+              { text: "Culinary Explorer", emoji: "🍽️" },
+            ].map((item) => (
+              <span 
+                key={item.text} 
+                className="py-2 px-4 text-xs lg:text-base font-semibold bg-[#10132E] rounded-lg text-center text-white opacity-80 flex items-center gap-2"
+              >
+                <span>{item.emoji}</span> {item.text}
+              </span>
+            ))}
+          </div>
+        )}
+
         { id === 1 && (
           <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
             <div className="flex flex-col gap-3 lg:gap-8">
-              {['JavaScript', 'Typescript', 'Java', 'C#',].map((item) => (
+              {['JavaScript', 'TypeScript', 'Java', 'Python', 'REST API', 'GraphQL'].map((item) => (
                 <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
                   {item}
                 </span>
@@ -127,7 +145,23 @@ export const BentoGridItem = ({
             </div>
             <div className="flex flex-col gap-3 lg:gap-8">
             <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]"></span>
-              {['React.js', 'Next.js', 'Node.js'].map((item) => (
+              {['React.js', 'Next.js', 'TailwindCSS', 'Node.js', 'Express.js', 'Spring Boot'].map((item) => (
+                <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
+                  {item}
+                </span>
+              ))}             
+            </div>
+            <div className="flex flex-col gap-3 lg:gap-8">
+              {['MongoDB', 'MySQL', 'PostgreSQL', 'AWS', 'GCP', 'Azure'].map((item) => (
+                <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
+                  {item}
+                </span>
+              ))}
+              <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]"></span>             
+            </div>
+            <div className="flex flex-col gap-3 lg:gap-8">
+            <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]"></span>
+              {['GitHub', 'Docker', 'Kubernetes', 'Jenkins', 'Terraform', 'Figma'].map((item) => (
                 <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
                   {item}
                 </span>
