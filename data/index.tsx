@@ -14,12 +14,12 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize collaboration, ensuring seamless communication and alignment",
-    description: "",
+    title: "Tech Stack: Always evolving, always improving",
+    description: "I constantly try to improve",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full object-contain md:max-w-md md:mx-auto",
-    titleClassName: "justify-start",
-    img: "/b1.svg",
+    imgClassName: "",
+    titleClassName: "justify-center",
+    img: "",
     spareImg: "",
   },
   {
@@ -34,17 +34,17 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "Tech Stack: Always evolving, always improving",
-    description: "I constantly try to improve",
+    title: "I prioritize collaboration, ensuring seamless communication and alignment",
+    description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
+    imgClassName: "w-full h-full object-contain md:max-w-md md:mx-auto",
+    titleClassName: "justify-start",
+    img: "/b1.svg",
     spareImg: "",
   },
   {
     id: 4,
-    title: "Tech enthusiast passionate about innovation and impact",
+    title: "With 2+ years of experience and 20+ projects built, I excel at turning ideas into impactful real-world solutions.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -55,8 +55,8 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Building ICE Tracker: A heatmap of ICE arrests in Massachusetts with an AI-powered chatbot and call-based immigration assistance",
-    description: "The Inside Scoop",
+    title: "Passionate about building technology that streamlines workflows, boosts engagement, and drives innovation to create real impact and value.",
+    description: "",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
