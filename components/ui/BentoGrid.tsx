@@ -120,6 +120,7 @@ export const BentoGridItem = ({
             {[
               { text: "2+ years of experience", emoji: "💼" },
               { text: "20+ projects built", emoji: "🚀" },
+              { text: "3+ Volunteering", emoji: "🚀" },
               { text: "Candid Street Photographer", emoji: "📷" },
               { text: "Culinary Explorer", emoji: "🍽️" },
             ].map((item) => (
