@@ -123,7 +123,22 @@ export const projects = [
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],  // change to p5.svg
     link: "https://github.com/Vinit-Y/TechHub-E-commerce-App",
   },
-
+  {
+    id: 7,
+    title: "FlashLearn - A Flashcard App",
+    des: "Webapp designed to facilitate interactive learning through flashcards. The application provides users with the opportunity to enhance their knowledge of JavaScript or Java programming languages through engaging quizzes and scoring mechanisms.",
+    img: "/p4.svg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "https://github.com/Vinit-Y/FlashLearn",
+  },
+  {
+    id: 8,
+    title: "Current Portfolio Website",
+    des: "A modern and responsive portfolio website built with TypeScript, React, Next.js, Three.js, Tailwind CSS, Aceternity UI, Shadcn, Framer Motion, and Sentry.",
+    img: "/p5.svg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://github.com/Vinit-Y/portfolio-v3",
+  }
 ];
 
 export const testimonials = [
