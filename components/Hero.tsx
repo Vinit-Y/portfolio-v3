@@ -4,6 +4,7 @@ import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import { MagicButton } from './ui/MagicButton'
 import { PiReadCvLogoBold } from 'react-icons/pi'
+import { IoPersonCircleOutline } from 'react-icons/io5';
 
 const Hero = () => {
 
@@ -33,19 +34,27 @@ const Hero = () => {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white  [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
       </div>
 
-      <div className="flex justify-center relative my-40 z-10">
+      <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-4xl xl:max-w-5xl flex flex-col items-center justify-center">
           <h2 className="uppercase tracking-widest text-lg text-center text-blue-100">Full-Stack Developer | Software Engineer | AI Enthusiast</h2>
-          <img src="/assets/vinit.png" alt="Vinit Yadav" className="w-40 h-40 md:w-52 md:h-52 lg:w-60 lg:h-60 xl:w-72 xl:h-72 rounded-full mt-10"/>
-          <TextGenerateEffect className="text-center text-[40px] md:text-4xl lg:text-5xl xl:text-6xl font-bold mt-10" words="Hi👋, I&apos;m  Vinit Yadav" duration={1.5} filter={true}/>
-          <p className="text-center md:tracking-wider m-10 text-sm md:text-lg lg:text-xl xl:text-2xl">Welcome! Whether you're here to get inspired ✨, collaborate 🤝, or just explore 🔍, I hope you find something valuable. Feel free to browse my work 💻, check out my projects 🚀, and reach out—let's connect! 📩</p>
-          <a className='mt-10'>
-            <MagicButton 
-              title="View Resume" 
-              icon={<PiReadCvLogoBold/>}
-              handleClick={handleResumeClick}
-            />
-          </a>
+          <img src="/assets/vinit.png" alt="Image of Vinit Yadav" className='rounded-full'/>
+          <TextGenerateEffect className="text-center text-[36px] md:text-4xl lg:text-5xl xl:text-6xl font-bold" words="Hi👋, I&apos;m  Vinit Yadav" duration={1.5} filter={true}/>
+          <p className="text-center md:tracking-wider m-5 text-sm md:text-lg lg:text-xl xl:text-2xl">Welcome! Whether you're here to get inspired ✨, collaborate 🤝, or just explore 🔍, I hope you find something valuable. Feel free to browse my work 💻, check out my projects 🚀, and reach out—let's connect! 📩</p>
+            <div className="flex space-x-4">
+              <a>
+              <MagicButton 
+                title="View Resume" 
+                icon={<PiReadCvLogoBold />}
+                handleClick={handleResumeClick}
+              />
+              </a>
+              <a href="#about" className="hidden md:inline">
+              <MagicButton 
+                title="About Me" 
+                icon={<IoPersonCircleOutline />}
+              />
+              </a>
+            </div>
         </div>
       </div>
     </div>
