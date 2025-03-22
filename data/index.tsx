@@ -1,4 +1,4 @@
-import { title } from "process";
+// import { title } from "process";
 
 export const navItems = [
   { name: "Home", link: "/", iconName: "Home" },
@@ -80,7 +80,7 @@ export const projects = [
     title: "ICE Tracker",
     des: "Building ICE Tracker: A heatmap of ICE arrests in Massachusetts with an AI-powered chatbot and call-based immigration assistance.",
     img: "/p1.png",
-    iconLists: ["/re.svg", "/three.svg", "/supabase.svg", "/mapbox.svg"],
+    iconLists: ["/react.svg", "/supabase.svg", "/mapbox.svg", "nodejs.svg", "openai.svg", "twilio.svg"],
     link: "https://github.com/Vinit-Y/ICE_Tracker",
   },
   {
