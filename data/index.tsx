@@ -1,7 +1,7 @@
 // import { title } from "process";
 
 export const navItems = [
-  { name: "Home", link: "/", iconName: "Home" },
+  // { name: "Home", link: "/", iconName: "Home" },
   { name: "About", link: "#about", iconName: "User" },
   { name: "Education", link: "#education", iconName: "GraduationCap" },
   { name: "Experience", link: "#experience", iconName: "Briefcase" },
