@@ -2,7 +2,7 @@ import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNav";  
 import { Grid } from "@/components/Grid";
 import { navItems } from "@/data";
-import { Education } from "@/components/Education";
+import Education from "@/components/Education";
 import { RecentProjects } from "@/components/RecentProjects";
 
 export default function Home() {

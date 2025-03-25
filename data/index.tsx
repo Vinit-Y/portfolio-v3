@@ -143,34 +143,22 @@ export const projects = [
 
 export const education = [
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    id: 1,
+    university: "Northeastern University",
+    degree: "Master of Science in Information Systems",
+    date: "January, 2023 - May, 2025",
+    courses: "Application Engineering & Development, Web Design & User Experience Engineering, Object-Oriented Programming in Java, Network Structures & Cloud Computing, Program Structure & Algorithms, Wed Development Tools & Methods, Advanced Big-Data Applications and Indexing Techniques, Design Patterns",
+    extracurriculars: "Graduate Student Government, Lead360",
+    img: "/northeastern.png",
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    id: 2,
+    university: "University of Mumbai",
+    degree: "Bachelor of Engineering in Computer Engineering",
+    date: "August, 2018 - May, 2022",
+    courses: "Structured Programming Approach, Operating Systems, Data Structures and Algorithms, Computer Graphics, Management Information System, Database Management System, Big Data Analytics, Artificial Intelligence and Soft Computing, Data Warehousing and Mining, and Machine Learning.",
+    extracurriculars: "Computer Engineering Students’ Association - LTCE & COMPUTER SOCIETY OF INDIA - LTCE[CESA-CSI-LTCE], Institution's Innovation Council Student Council, and National Service Scheme.",
+    img: "/mumbaiUniversity.png",
   },
 ];
 
