@@ -39,7 +39,7 @@ const Hero = () => {
           <h2 className="uppercase tracking-widest text-lg text-center text-blue-100">Full-Stack Developer | Software Engineer | AI Enthusiast</h2>
           <img src="/assets/vinit.png" alt="Image of Vinit Yadav" className='rounded-full'/>
           <TextGenerateEffect className="text-center text-[36px] md:text-4xl lg:text-5xl xl:text-6xl font-bold" words="Hi👋, I&apos;m  Vinit Yadav" duration={1.5} filter={true}/>
-          <p className="text-center md:tracking-wider m-5 text-sm md:text-lg lg:text-xl xl:text-2xl">Welcome! Whether you're here to get inspired ✨, collaborate 🤝, or just explore 🔍, I hope you find something valuable. Feel free to browse my work 💻, check out my projects 🚀, and reach out—let's connect! 📩</p>
+          <p className="text-center md:tracking-wider m-5 text-sm md:text-lg lg:text-xl xl:text-2xl">Welcome! Whether you&apos;re here to get inspired ✨, collaborate 🤝, or just explore 🔍, I hope you find something valuable. Feel free to browse my work 💻, check out my projects 🚀, and reach out—let&apos;s connect! 📩</p>
             <div className="flex space-x-4">
               <a>
               <MagicButton 

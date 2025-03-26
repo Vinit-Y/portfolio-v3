@@ -88,7 +88,7 @@ export const projects = [
     title: "Assignment Management System",
     des: "An Assignment Management System built with Node.js and Express.js, featuring user authentication, AWS and GCP infrastructure, Packer for image creation, GitHub Actions for CI/CD, Jest for testing, Winston logging, CSV processing for user accounts, and Sequelize for database management.",
     img: "/p2.svg",
-    iconLists: ["javascript.svg", "nodejs.svg", "aws.svg", "gcp.svg", "jest.svg", "sequelize.svg", "terraform.svg", "github.svg"],
+    iconLists: ["javascript.svg", "aws.svg", "gcp.svg", "jest.svg", "sequelize.svg", "terraform.svg"],
     link: "https://github.com/Vinit-Y/webapp",
   },
   {
@@ -128,7 +128,7 @@ export const projects = [
     title: "TechHub-E-commerce-App",
     des: "The TechHub E-commerce App is a computer sales platform built with ReactJS, Redux, Bootstrap, and SCSS for a dynamic UI, and ExpressJS with MongoDB for backend services. It integrates Stripe for secure payments and is deployed on Heroku, ensuring a seamless shopping experience.",
     img: "/p5.svg",
-    iconLists: ["bootstrap.svg","mongodb.svg", "express.svg", "react.svg", "nodejs.svg", "redux.svg", "stripe.svg"],
+    iconLists: ["bootstrap.svg","mongodb.svg", "express.svg", "react.svg", "redux.svg", "stripe.svg"],
     link: "https://github.com/Vinit-Y/TechHub-E-commerce-App",
   },
   {

@@ -1,6 +1,6 @@
-import { education } from '@/data'
-import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
 import React from 'react'
+import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
+import { education } from '@/data'
 
 const Education = () => {
   return (
@@ -8,15 +8,12 @@ const Education = () => {
       <h1 className="heading">
         Education
       </h1>
-      <div className="flex flex-col items-center">
-        <div className="rounded-md flex flex-col antialiased iteems-center relative overflow-hidden">
-          <InfiniteMovingCards 
-            items={education}
-            direction= "right"
-            speed= "slow"
-          />
-        </div>
-
+      <div className="flex flex-col items-center max-lg:mt-10">
+        <InfiniteMovingCards 
+          items={education}
+          direction= "right"
+          speed= "slow"
+        />
       </div>
     </div>
   )
