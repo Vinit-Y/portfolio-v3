@@ -77,21 +77,25 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 w-screen overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className,
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
+          "flex w-max min-w-full shrink-0 flex-nowrap gap-16 py-12",
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >
         {items.map((item) => (
           <li
-            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-8 py-6 md:w-[450px] dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
+            className="relative w-[90vw] max-w-full rounded-2xl border border-b-0 border-slate-800 p-5 md:p-12 md:w-[60vw]"
+            style={{
+              background: 'rgb(2,0,36)',
+              backgroundColor: 'radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(55,55,189,1) 56%, rgba(0,212,255,1) 100%)',
+            }}
             key={item.id}
           >
             <blockquote>
@@ -105,21 +109,21 @@ export const InfiniteMovingCards = ({
                 className="mb-4 w-full h-auto max-h-40 object-contain rounded-md"
               /> {/* Display image at the top */}
               <div className="text-center"> {/* Center the university name */}
-                <span className="relative z-20 text-lg font-semibold leading-[1.6] text-neutral-800 dark:text-gray-100">
+                <span className="relative z-20 text-lg font-semibold leading-[1.6]">
                   {item.university} {/* Display university */}
                 </span>
               </div>
               <div className="relative z-20 mt-4 flex flex-col gap-2">
-                <span className="text-sm leading-[1.6] font-medium text-neutral-600 dark:text-gray-400">
+                <span className="text-sm leading-[1.6] font-medium ">
                   <strong>Degree:</strong> {item.degree} {/* Display degree */}
                 </span>
-                <span className="text-sm leading-[1.6] font-medium text-neutral-600 dark:text-gray-400">
+                <span className="text-sm leading-[1.6] font-medium ">
                   <strong>Date:</strong> {item.date} {/* Display date */}
                 </span>
-                <span className="text-sm leading-[1.6] font-medium text-neutral-600 dark:text-gray-400">
+                <span className="text-sm leading-[1.6] font-medium">
                   <strong>Courses:</strong> {item.courses} {/* Display courses */}
                 </span>
-                <span className="text-sm leading-[1.6] font-medium text-neutral-600 dark:text-gray-400">
+                <span className="text-sm leading-[1.6] font-medium">
                   <strong>Extracurricular Activities:</strong> {item.extracurriculars} {/* Display extracurriculars */}
                 </span>
               </div>

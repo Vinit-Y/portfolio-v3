@@ -9,11 +9,14 @@ const Education = () => {
         Education
       </h1>
       <div className="flex flex-col items-center">
-        <InfiniteMovingCards 
-          items={education}
-          direction= "right"
-          speed= "slow"
-        />
+        <div className="rounded-md flex flex-col antialiased iteems-center relative overflow-hidden">
+          <InfiniteMovingCards 
+            items={education}
+            direction= "right"
+            speed= "slow"
+          />
+        </div>
+
       </div>
     </div>
   )
