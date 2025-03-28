@@ -162,7 +162,7 @@ export const education = [
   },
 ];
 
-export const companies = [
+export const skills = [
   {
     id: 1,
     name: "cloudinary",

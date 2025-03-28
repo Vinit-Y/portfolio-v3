@@ -1,6 +1,6 @@
 import React from 'react'
 import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
-import { education } from '@/data'
+import { education, skills } from '@/data'
 
 const Education = () => {
   return (
@@ -14,6 +14,14 @@ const Education = () => {
           direction= "right"
           speed= "slow"
         />
+        <div>
+          {skills.map(({name, img}) => (
+            <div key={name} className="flex items-center justify-center">
+              {img && <img src={img} alt={name} className="w-10 h-10 mr-2" />}
+              <p>{name}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
