@@ -26,20 +26,14 @@ export const FloatingNav = ({
 
   const [visible, setVisible] = useState(false);
 
-  useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
-    if (typeof current === "number") {
-      const direction = current! - scrollYProgress.getPrevious()!;
+  useMotionValueEvent(scrollYProgress, "change", () => {
+    const scrollY = scrollYProgress.get();
+    const threshold = 0.1; // Adjust this value for the scroll threshold (e.g., 10% of the page height)
 
-      if (scrollYProgress.get() < 0.05) {
-        setVisible(false);
-      } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
-      }
+    if (scrollY > threshold) {
+      setVisible(true);
+    } else {
+      setVisible(false);
     }
   });
 
