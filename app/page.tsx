@@ -4,6 +4,7 @@ import { Grid } from "@/components/Grid";
 import { navItems } from "@/data";
 import Education from "@/components/Education";
 import { RecentProjects } from "@/components/RecentProjects";
+import { Skills } from '@/components/Skills';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Hero />
         <Grid />
         <Education />
+        <Skills />
         <RecentProjects />
       </div>
     </main>

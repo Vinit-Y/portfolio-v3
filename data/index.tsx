@@ -1,7 +1,4 @@
-// import { title } from "process";
-
 export const navItems = [
-  // { name: "Home", link: "/", iconName: "Home" },
   { name: "About", link: "#about", iconName: "User" },
   { name: "Education", link: "#education", iconName: "GraduationCap" },
   { name: "Experience", link: "#experience", iconName: "Briefcase" },
@@ -80,7 +77,7 @@ export const projects = [
     title: "ICE Tracker",
     des: "Building ICE Tracker: A heatmap of ICE arrests in Massachusetts with an AI-powered chatbot and call-based immigration assistance.",
     img: "/p1.png",
-    iconLists: ["/react.svg", "/supabase.svg", "/mapbox.svg", "nodejs.svg", "chatgpt.svg", "twilio.svg"],
+    iconLists: ["/projectSVG/react.svg", "/projectSVG/supabase.svg", "/projectSVG/mapbox.svg", "/projectSVG/nodejs.svg", "/projectSVG/chatgpt.svg", "/projectSVG/twilio.svg"],
     link: "https://github.com/Vinit-Y/ICE_Tracker",
   },
   {
@@ -88,7 +85,7 @@ export const projects = [
     title: "Assignment Management System",
     des: "An Assignment Management System built with Node.js and Express.js, featuring user authentication, AWS and GCP infrastructure, Packer for image creation, GitHub Actions for CI/CD, Jest for testing, Winston logging, CSV processing for user accounts, and Sequelize for database management.",
     img: "/p2.svg",
-    iconLists: ["javascript.svg", "aws.svg", "gcp.svg", "jest.svg", "sequelize.svg", "terraform.svg"],
+    iconLists: ["/projectSVG/javascript.svg", "/projectSVG/aws.svg", "/projectSVG/gcp.svg", "/projectSVG/jest.svg", "/projectSVG/sequelize.svg", "/projectSVG/terraform.svg"],
     link: "https://github.com/Vinit-Y/webapp",
   },
   {
@@ -96,7 +93,7 @@ export const projects = [
     title: "Current Portfolio Website",
     des: "A modern and responsive portfolio website built with TypeScript, React, Next.js, Three.js, Tailwind CSS, Aceternity UI, Shadcn, Framer Motion, and Sentry.",
     img: "/p5.svg",
-    iconLists: ["/nextjs.svg", "/tailwindCSS.svg", "/typescript.svg", "/three.svg", "/framermotion.svg", "/sentry.svg"],
+    iconLists: ["/projectSVG/nextjs.svg", "/projectSVG/tailwindCSS.svg", "/projectSVG/typescript.svg", "/projectSVG/three.svg", "/projectSVG/framermotion.svg", "/projectSVG/sentry.svg"],
     link: "https://github.com/Vinit-Y/portfolio-v3",
   },  
   {
@@ -104,7 +101,7 @@ export const projects = [
     title: "GrubBites - Food Ordering App",
     des: "​GrubBites is an online food ordering platform designed to simplify the ordering process and enhance user experience. The application is built using React for the frontend, and Node.js, Express.js, and MongoDB for the backend. It integrates Stripe for secure payments and is deployed on Heroku.",
     img: "/p2.svg",
-    iconLists: ["mongodb.svg", "express.svg", "react.svg", "nodejs.svg", "stripe.svg"],
+    iconLists: ["/projectSVG/mongodb.svg", "/projectSVG/express.svg", "/projectSVG/react.svg", "/projectSVG/nodejs.svg", "/projectSVG/stripe.svg"],
     link: "https://github.com/Vinit-Y/GrubBites",
   },
   {
@@ -112,7 +109,7 @@ export const projects = [
     title: "City Management System",
     des: "The City Management System is a Java-based app using Java Swing, MySQL,and JDBC to manage city services like employment, healthcare, and education. Built in IntelliJ IDEA and NetBeans, it applies object-oriented programming and data-driven solutions while addressing cost and privacy challenges.",
     img: "/p3.svg",
-    iconLists: ["java.svg", "mysql.svg", "netbeans.svg", "intellij.svg"],
+    iconLists: ["/projectSVG/java.svg", "/projectSVG/mysql.svg", "/projectSVG/netbeans.svg", "/projectSVG/intellij.svg"],
     link: "https://github.com/Vinit-Y/AED_FINAL_PROJECT",
   },
   { 
@@ -120,7 +117,7 @@ export const projects = [
     title: "Insurance-Plan-Service",
     des: "The project focuses on distributed systems and big data indexing. It uses Elasticsearch for efficient search and data indexing, Kibana for visualization and monitoring, and RabbitMQ for reliable message queuing and communication. The project simplifies deployment and management for scalable data processing.",
     img: "/p4.svg",
-    iconLists: ["elasticsearch.svg", "kibana.svg", "rabbitmq.svg", "docker.svg", "javascript.svg"], 
+    iconLists: ["/projectSVG/elasticsearch.svg", "/projectSVG/kibana.svg", "/projectSVG/rabbitmq.svg", "/projectSVG/docker.svg", "/projectSVG/javascript.svg"], 
     link: "https://github.com/Vinit-Y/Insurance-Plan-Service",
   },
   {
@@ -128,7 +125,7 @@ export const projects = [
     title: "TechHub-E-commerce-App",
     des: "The TechHub E-commerce App is a computer sales platform built with ReactJS, Redux, Bootstrap, and SCSS for a dynamic UI, and ExpressJS with MongoDB for backend services. It integrates Stripe for secure payments and is deployed on Heroku, ensuring a seamless shopping experience.",
     img: "/p5.svg",
-    iconLists: ["bootstrap.svg","mongodb.svg", "express.svg", "react.svg", "redux.svg", "stripe.svg"],
+    iconLists: ["/projectSVG/bootstrap.svg", "/projectSVG/mongodb.svg", "/projectSVG/express.svg", "/projectSVG/react.svg", "/projectSVG/redux.svg", "/projectSVG/stripe.svg"],
     link: "https://github.com/Vinit-Y/TechHub-E-commerce-App",
   },
   {
@@ -136,7 +133,7 @@ export const projects = [
     title: "FlashLearn - A Flashcard App",
     des: "Webapp designed to facilitate interactive learning through flashcards. The application provides users with the opportunity to enhance their knowledge of JavaScript or Java programming languages through engaging quizzes and scoring mechanisms.",
     img: "/p4.svg",
-    iconLists: ["vite.svg", "nodejs.svg", "express.svg", "react.svg"],
+    iconLists: ["/projectSVG/vite.svg", "/projectSVG/nodejs.svg", "/projectSVG/express.svg", "/projectSVG/react.svg"],
     link: "https://github.com/Vinit-Y/FlashLearn",
   },
 ];
@@ -162,37 +159,104 @@ export const education = [
   },
 ];
 
-export const skills = [
+// Skills interfaces
+export interface Skill {
+  name: string;
+  icon: string;  // Path to skill icon
+}
+
+export interface SkillCategory {
+  title: string;
+  skills: Skill[];
+}
+
+// Skills data
+export const skillsData: SkillCategory[] = [
   {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
+    title: "Programming Languages",
+    skills: [
+      { name: "JavaScript", icon: "/skills/javascript.svg" },
+      { name: "TypeScript", icon: "/skills/typescript.svg" },
+      { name: "Python", icon: "/skills/python.svg" },
+      { name: "Java", icon: "/skills/java.svg" },
+      { name: "C#", icon: "/skills/csharp.svg" },
+      { name: "C++", icon: "/skills/cpp.svg" },
+      { name: "Bash", icon: "/skills/bash.svg" },
+    ]
   },
   {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
+    title: "Web & Build Technologies",
+    skills: [
+      { name: "React.js", icon: "/skills/react.svg" },
+      { name: "Node.js", icon: "/skills/nodejs.svg" },
+      { name: "Redux", icon: "/skills/redux.svg" },
+      { name: "AJAX", icon: "/skills/ajax.svg" },
+      { name: "Angular", icon: "/skills/angular.svg" },
+      { name: "Webpack", icon: "/skills/webpack.svg" },
+      { name: "Babel", icon: "/skills/babel.svg" },
+      { name: "Vite", icon: "/skills/vite.svg" },
+      { name: "TailwindCSS", icon: "/skills/tailwind.svg" },
+      { name: "Bootstrap", icon: "/skills/bootstrap.svg" },
+      { name: "SASS", icon: "/skills/sass.svg" },
+      { name: "Winston", icon: "/skills/winston.svg" }
+    ]
   },
   {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
+    title: "Frameworks & API Design",
+    skills: [
+      { name: "Spring Boot", icon: "/skills/springboot.svg" },
+      { name: ".Net", icon: "/skills/dotnet.svg" },
+      { name: "Express.js", icon: "/skills/express.svg" },
+      { name: "Next.js", icon: "/skills/nextjs.svg" },
+      { name: "RESTful APIs", icon: "/skills/rest.svg" },
+      { name: "GraphQL", icon: "/skills/graphql.svg" }
+    ]
   },
   {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
+    title: "Databases & Indexing Engines",
+    skills: [
+      { name: "PostgreSQL", icon: "/skills/postgresql.svg" },
+      { name: "MySQL", icon: "/skills/mysql.svg" },
+      { name: "MongoDB", icon: "/skills/mongodb.svg" },
+      { name: "Redis", icon: "/skills/redis.svg" },
+      { name: "DynamoDB", icon: "/skills/dynamodb.svg" },
+      { name: "Elasticsearch", icon: "/skills/elasticsearch.svg" }
+    ]
   },
   {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
+    title: "Cloud & DevOps",
+    skills: [
+      { name: "AWS", icon: "/skills/aws.svg" },
+      { name: "GCP", icon: "/skills/gcp.svg" },
+      { name: "Azure", icon: "/skills/azure.svg" },
+      { name: "Docker", icon: "/skills/docker.svg" },
+      { name: "Kubernetes", icon: "/skills/kubernetes.svg" },
+      { name: "Jenkins", icon: "/skills/jenkins.svg" },
+      { name: "GitHub Actions", icon: "/skills/github.svg" },
+      { name: "Terraform", icon: "/skills/terraform.svg" },
+      { name: "Packer", icon: "/skills/packer.svg" },
+      { name: "RabbitMQ", icon: "/skills/rabbitmq.svg" }
+    ]
   },
+  {
+    title: "Software, Tools & Testing",
+    skills: [
+      { name: "Shell Scripting", icon: "/skills/shell.svg" },
+      { name: "Postman", icon: "/skills/postman.svg" },
+      { name: "GitHub", icon: "/skills/github.svg" },
+      { name: "Figma", icon: "/skills/figma.svg" },
+      { name: "VS Code", icon: "/skills/vscode.svg" },
+      { name: "Eclipse", icon: "/skills/eclipse.svg" },
+      { name: "IntelliJ", icon: "/skills/intellij.svg" },
+      { name: "JUnit", icon: "/skills/junit.svg" },
+      { name: "Selenium", icon: "/skills/selenium.svg" },
+      { name: "Jest", icon: "/skills/jest.svg" },
+      { name: "Kibana", icon: "/skills/kibana.svg" },
+      { name: "Sentry", icon: "/skills/sentry.svg" },
+      { name: "Firebase", icon: "/skills/firebase.svg" },
+      { name: "Supabase", icon: "/skills/supabase.svg" }
+    ]
+  }
 ];
 
 export const workExperience = [
