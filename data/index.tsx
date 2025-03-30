@@ -306,12 +306,6 @@ export const socialMedia = [
     icon: FaGithub,
   },
   {
-    id: 3,
-    name: "Email",
-    link: "mailto:yadav.vini@northeastern.edu",
-    icon: FaEnvelope,
-  },
-  {
     id: 4,
     name: "Google Cloud Skills Boost",
     link: "https://www.cloudskillsboost.google/public_profiles/5d83db01-d6e6-413f-b5c4-8767a4564ccd",

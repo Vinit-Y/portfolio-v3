@@ -50,7 +50,7 @@ const Footer = () => {
           ))}
         </div>
         <p className="text-sm text-gray-500 mt-8">
-          © {new Date().getFullYear()} Vinit Yadav.
+          © {new Date().getFullYear()} Vinit Yadav
         </p>
       </div>
     </footer>
