@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio v3
+
+This is a modern and responsive portfolio website built using cutting-edge technologies like **Next.js**, **React**, **TypeScript**, **Three.js**, **Tailwind CSS**, and more. It showcases projects, skills, and experiences in an interactive and visually appealing manner.
+
+## Features
+
+- **Dynamic Hero Section**: Animated text and spotlight effects.
+- **Interactive 3D Globe**: Visualizes connections and data points.
+- **Skills Showcase**: Categorized skills with icons.
+- **Projects Section**: Highlights recent projects with descriptions and links.
+- **Work Experience**: Detailed timeline of professional experience.
+- **Approach Section**: Explains the development process with animations.
+- **Responsive Design**: Optimized for all devices.
+- **Sentry Integration**: Error tracking and monitoring.
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to set up the project locally:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm, yarn, or pnpm (package manager)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Vinit-Y/portfolio-v3.git
+   cd portfolio-v3
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+## Technologies Used
+
+- **Frontend**: React, Next.js, TypeScript
+- **Styling**: Tailwind CSS, Framer Motion, Aceternity UI
+- **3D Graphics**: Three.js, @react-three/fiber
+- **Backend**: Node.js (for API integration)
+- **Monitoring**: Sentry
+- **Icons**: Lucide React, Devicons
+- **Deployment**: Vercel
+
+## Project Structure
+
+- `components/`: Reusable React components.
+- `data/`: Static data for skills, projects, and experience.
+- `scripts/`: Utility scripts for tasks like downloading icons.
+- `public/`: Static assets like images and icons.
+- `app/`: Next.js app directory for routing and layout.
+- `lib/`: Utility functions.
+- `styles/`: Global CSS and Tailwind configuration.
+
+## Deployment
+
+The project is deployed on [Vercel](https://vercel.com). To deploy your own version:
+
+1. Push your code to a GitHub repository.
+2. Connect the repository to Vercel.
+3. Configure environment variables in the Vercel dashboard.
+4. Deploy the project with a single click.
+
+## Environment Variables
+
+Create a `.env.local` file in the root directory and add the following variables:
+
+```
+NEXT_PUBLIC_SITE_URL=<your-site-url>
+SENTRY_DSN=<your-sentry-dsn>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
 
-<!-- This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel. -->
+## License
 
-## Learn More
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For any inquiries, feel free to reach out:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Email**: [yadav.vini@northeastern.edu](mailto:yadav.vini@northeastern.edu)
+- **LinkedIn**: [Vinit Yadav](https://www.linkedin.com/in/Vinit-Y)
+- **GitHub**: [Vinit-Y](https://github.com/Vinit-Y)

@@ -19,7 +19,7 @@ const Footer = () => {
 
       <div className="relative z-10 text-center">
         <h1 className="text-2xl font-bold">
-          Let&apos;s bring your <span className="text-blue-500">ideas</span> to life
+          Let&apos;s bring your <span className="text-blue-500">ideas to life</span>
         </h1>
         <p className="text-sm text-gray-400 mt-4 max-w-2xl mx-auto">
           Need help building something scalable, user-friendly, and performance-driven? 
