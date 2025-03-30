@@ -6,7 +6,7 @@ import Education from "@/components/Education";
 import { RecentProjects } from "@/components/RecentProjects";
 import { Skills } from '@/components/Skills';
 import Experience from "@/components/Experience";
-import { Approach } from "@/components/Approach";
+import Approach from "@/components/Approach";
 
 export default function Home() {
   return (
