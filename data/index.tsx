@@ -1,3 +1,5 @@
+import { FaLinkedin, FaGithub, FaEnvelope, FaGoogle } from "react-icons/fa";
+
 export const navItems = [
   { name: "About", link: "#about", iconName: "User" },
   { name: "Education", link: "#education", iconName: "GraduationCap" },
@@ -293,18 +295,26 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
-    img: "/linkedin.svg",
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/Vinit-Y",
+    icon: FaLinkedin,
   },
   {
     id: 2,
-    img: "/github.svg",
+    name: "GitHub",
+    link: "https://github.com/Vinit-Y",
+    icon: FaGithub,
   },
   {
     id: 3,
-    img: "/email.svg",
+    name: "Email",
+    link: "mailto:yadav.vini@northeastern.edu",
+    icon: FaEnvelope,
   },
   {
     id: 4,
-    img: "/gcp.svg",
+    name: "Google Cloud Skills Boost",
+    link: "https://www.cloudskillsboost.google/public_profiles/5d83db01-d6e6-413f-b5c4-8767a4564ccd",
+    icon: FaGoogle,
   },
 ];

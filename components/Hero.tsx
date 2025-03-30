@@ -10,14 +10,8 @@ const Hero = () => {
 
   const handleResumeClick = () => {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-    console.log('Site URL:', siteUrl); // Debug log
-    
     const pdfUrl = `${siteUrl}/public/assets/resumes/resume.pdf`;
-    console.log('PDF URL:', pdfUrl); // Debug log
-    
     const viewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(pdfUrl)}&embedded=true`;
-    console.log('Viewer URL:', viewerUrl); // Debug log
-    
     window.open(viewerUrl, '_blank', 'noopener,noreferrer');
   }
   
