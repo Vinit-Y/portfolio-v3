@@ -85,7 +85,10 @@ Create a `.env.local` file in the root directory and add the following variables
 
 ```
 NEXT_PUBLIC_SITE_URL=<your-site-url>
+SENTRY_AUTH_TOKEN=<your-sentry-auth-token>
 SENTRY_DSN=<your-sentry-dsn>
+SENTRY_ORG=<your-sentry-org>
+SENTRY_PROJECT=<your-sentry-project>
 ```
 
 ## Contributing
