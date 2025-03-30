@@ -10,7 +10,7 @@ const Hero = () => {
 
   const handleResumeClick = () => {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-    const pdfUrl = `${siteUrl}/public/assets/resumes/resume.pdf`;
+    const pdfUrl = `${siteUrl}/assets/resumes/resume.pdf`; // Removed `/public`
     const viewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(pdfUrl)}&embedded=true`;
     window.open(viewerUrl, '_blank', 'noopener,noreferrer');
   }
