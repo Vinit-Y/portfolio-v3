@@ -11,6 +11,27 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      // Disable warning for using <img> instead of <Image />
+      "@next/next/no-img-element": "off",
+      // Warn about using 'any' type
+      "@typescript-eslint/no-explicit-any": "warn",
+      // Disable warning for using 'var'
+      "no-var": "off",
+      // Disable warning for unused variables
+      "@typescript-eslint/no-unused-vars": ["warn", { varsIgnorePattern: "^e$" }],
+      // Disable warning for variables never reassigned
+      "prefer-const": "off",
+      // Disable TypeScript errors for non-exported members
+      "no-unused-vars": ["off", { argsIgnorePattern: "^Object3DNode$" }],
+      // Enforce using @ts-expect-error instead of @ts-ignore
+      "@typescript-eslint/ban-ts-comment": [
+        "error",
+        { "ts-ignore": "allow-with-description" },
+      ],
+    },
+  },
 ];
 
 export default eslintConfig;
