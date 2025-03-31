@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaGoogle } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaGoogle, FaFilePdf } from "react-icons/fa";
 
 export const navItems = [
   { name: "About", link: "#about", iconName: "User" },
@@ -292,6 +292,10 @@ export const workExperience = [
   },
 ];
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const pdfUrl = `${siteUrl}/Vinit_Yadav_Resume.pdf`;
+const viewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(pdfUrl)}&embedded=true`;
+
 export const socialMedia = [
   {
     id: 1,
@@ -306,9 +310,17 @@ export const socialMedia = [
     icon: FaGithub,
   },
   {
-    id: 4,
+    id: 3,
     name: "Google Cloud Skills Boost",
     link: "https://www.cloudskillsboost.google/public_profiles/5d83db01-d6e6-413f-b5c4-8767a4564ccd",
     icon: FaGoogle,
+  },
+  {
+    id: 4,
+    name: "Resume",
+    link: viewerUrl,
+    icon: FaFilePdf,
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
 ];
