@@ -1,17 +1,19 @@
 # Portfolio v3
 
-This is a modern and responsive portfolio website built using cutting-edge technologies like **Next.js**, **React**, **TypeScript**, **Three.js**, **Tailwind CSS**, and more. It showcases projects, skills, and experiences in an interactive and visually appealing manner.
+This is a modern, responsive portfolio website built using **Next.js**, **React**, **TypeScript**, **Three.js**, and **Tailwind CSS**. It showcases projects, skills, and experiences in an interactive and visually appealing manner.
 
 ## Features
 
-- **Dynamic Hero Section**: Animated text and spotlight effects.
+- **Dynamic Hero Section**: Animated text with spotlight effects.
 - **Interactive 3D Globe**: Visualizes connections and data points.
 - **Skills Showcase**: Categorized skills with icons.
 - **Projects Section**: Highlights recent projects with descriptions and links.
-- **Work Experience**: Detailed timeline of professional experience.
+- **Work Experience**: Detailed professional timeline.
 - **Approach Section**: Explains the development process with animations.
 - **Responsive Design**: Optimized for all devices.
 - **Sentry Integration**: Error tracking and monitoring.
+- **Contact Form**: Modal-based form with validation and toast notifications.
+- **Footer Section**: Includes social media links and a call-to-action.
 
 ## Getting Started
 
@@ -85,6 +87,7 @@ Create a `.env.local` file in the root directory and add the following variables
 
 ```
 NEXT_PUBLIC_SITE_URL=<your-site-url>
+NEXT_PUBLIC_FORMSPREE_FORM_ID=<your-form-id>
 SENTRY_AUTH_TOKEN=<your-sentry-auth-token>
 SENTRY_DSN=<your-sentry-dsn>
 SENTRY_ORG=<your-sentry-org>
