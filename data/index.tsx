@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaEnvelope, FaGoogle } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaGoogle } from "react-icons/fa";
 
 export const navItems = [
   { name: "About", link: "#about", iconName: "User" },
@@ -6,7 +6,7 @@ export const navItems = [
   { name: "Experience", link: "#workExperience", iconName: "Briefcase" },
   { name: "Skills", link: "#skills", iconName: "Code2" },
   { name: "Projects", link: "#projects", iconName: "FolderGit2" },
-  { name: "Resume", link: "/assets/resumes/resume.pdf", iconName: "FileText" },
+  { name: "Approach", link: "#approach", iconName: "Compass" },
   { name: "Contact", link: "#contact", iconName: "Mail" }
 ];
 
