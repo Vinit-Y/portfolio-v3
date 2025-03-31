@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
-import confetti from 'canvas-confetti'; // Import canvas-confetti
-import { toast } from 'react-toastify'; // Import toast
+import confetti from 'canvas-confetti';
+import { toast } from 'react-toastify';
 
 interface ModalProps {
   isOpen: boolean;
@@ -18,16 +18,17 @@ const sanitizeInput = (input: string) => {
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState({ name: '', email: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const resetForm = () => {
-    setFormData({ name: '', email: '', message: '' }); // Reset form data
-    setErrors({ name: '', email: '', message: '' }); // Clear errors
+    setFormData({ name: '', email: '', message: '' });
+    setErrors({ name: '', email: '', message: '' });
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: sanitizeInput(value) }); // Sanitize input
-    setErrors({ ...errors, [name]: '' }); // Clear error on input change
+    setFormData({ ...formData, [name]: sanitizeInput(value) });
+    setErrors({ ...errors, [name]: '' });
   };
 
   const validateForm = () => {
@@ -51,28 +52,49 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     return !newErrors.name && !newErrors.email && !newErrors.message;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      onClose(); // Close modal immediately
-      toast.success('Thank you for reaching out!'); // Show thank-you message
-      resetForm(); // Reset form after submission
-
-      // Trigger confetti after modal closes
-      setTimeout(() => {
-        confetti({
-          particleCount: 100,
-          spread: 70,
-          origin: { y: 0.6 },
+      setIsSubmitting(true);
+      try {
+        const formspreeUrl = `${process.env.NEXT_PUBLIC_FORMSPREE_FORM_ENDPOINT}`;
+        const response = await fetch(formspreeUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
         });
-      }, 300); // Delay to ensure modal is closed before confetti appears
+
+        if (response.ok) {
+          toast.success('Thank you for reaching out!');
+          resetForm();
+          onClose();
+          setTimeout(() => {
+            confetti({
+              particleCount: 100,
+              spread: 70,
+              origin: { y: 0.6 },
+            });
+          }, 300);
+        } else {
+          const errorData = await response.json();
+          console.error('Formspree error:', errorData);
+          toast.error('Something went wrong. Please try again later.');
+        }
+      } catch (error) {
+        console.error('Network or server error:', error);
+        toast.error('An error occurred. Please check your network connection.');
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
   const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       onClose();
-      resetForm(); // Reset form when modal is closed
+      resetForm();
     }
   };
 
@@ -128,7 +150,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                   className="px-4 py-2 bg-gray-600 text-gray-300 rounded-md hover:bg-gray-500"
                   onClick={() => {
                     onClose();
-                    resetForm(); // Reset form when cancel button is clicked
+                    resetForm();
                   }}
                 >
                   Cancel
@@ -136,8 +158,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 <button
                   type="submit"
                   className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                  disabled={isSubmitting}
                 >
-                  Submit
+                  {isSubmitting ? 'Submitting...' : 'Submit'}
                 </button>
               </div>
             </form>
