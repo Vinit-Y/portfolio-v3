@@ -87,7 +87,7 @@ Create a `.env.local` file in the root directory and add the following variables
 
 ```
 NEXT_PUBLIC_SITE_URL=<your-site-url>
-NEXT_PUBLIC_FORMSPREE_FORM_ID=<your-form-id>
+NEXT_PUBLIC_FORMSPREE_FORM_ENDPOINT=<your-form-id>
 SENTRY_AUTH_TOKEN=<your-sentry-auth-token>
 SENTRY_DSN=<your-sentry-dsn>
 SENTRY_ORG=<your-sentry-org>
