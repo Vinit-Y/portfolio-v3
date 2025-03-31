@@ -25,7 +25,7 @@ const Approach = () => {
           />
         </Card>
         <Card 
-          title="Build & Architect"
+          title="Architect & Build"
           description="Develop full-stack applications with scalable architecture, clean code, and best practices."
           icon={<MagicButton title="Phase 2" icon />}
         >
