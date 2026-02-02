@@ -1,33 +1,81 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import { skillsData } from '@/data';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 export const Skills = () => {
+  const [expandedCategories, setExpandedCategories] = useState<string[]>(
+    [skillsData[0]?.title] // Only first category expanded
+  );
+
+  const toggleCategory = (title: string) => {
+    setExpandedCategories(prev =>
+      prev.includes(title)
+        ? prev.filter(t => t !== title)
+        : [...prev, title]
+    );
+  };
+
   return (
-    <div className="py-16" id="skills">
-      <h1 className="heading">
+    <section className="py-20" id="skills">
+      <h1 className="heading text-center text-3xl font-bold text-gray-100 mb-12">
         My <span className="text-blue-500">Skills</span>
       </h1>
-      
-      <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 px-4">
-        {skillsData.map((category, index) => (
-          <div key={index} className="bg-[#13162d]/50 rounded-xl p-6 border border-white/[0.1] hover:border-blue-500/50 transition-all duration-300">
-            <h2 className="text-xl font-semibold mb-4 text-blue-400">{category.title}</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {category.skills.map((skill, skillIndex) => (
-                <div 
-                  key={skillIndex} 
-                  className="flex items-center gap-2 bg-[#13162d]/80 p-2.5 rounded-lg hover:bg-blue-500/10 transition-all duration-200"
-                >
-                  <div className="w-8 h-8 flex items-center justify-center bg-blue-500/20 rounded-md">
-                    <img src={skill.icon} alt={skill.name} className="w-5 h-5" />
+
+      <div className="mx-auto space-y-4">
+        {skillsData.map((category) => {
+          const isExpanded = expandedCategories.includes(category.title);
+          
+          return (
+            <div
+              key={category.title}
+              className="rounded-xl overflow-hidden transition-all duration-300 bg-gradient-to-br from-blue-900/30 to-purple-900/30 border-2 border-blue-500/50"
+            >
+              {/* Header - Always Visible */}
+              <button
+                onClick={() => toggleCategory(category.title)}
+                className="w-full p-4 flex items-center justify-between hover:bg-white/5 transition-colors"
+              >
+                <h3 className="text-xl font-bold text-white">{category.title}</h3>
+                {isExpanded ? (
+                  <FaChevronUp className="text-blue-400" />
+                ) : (
+                  <FaChevronDown className="text-gray-400" />
+                )}
+              </button>
+
+              {/* Expandable Skills Grid */}
+              <div
+                className={`transition-all duration-500 ease-in-out ${
+                  isExpanded ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
+                } overflow-hidden`}
+              >
+                <div className="p-6 pt-2">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    {category.skills.map((skill) => (
+                      <div
+                        key={skill.name}
+                        className="flex flex-col items-center gap-2 p-3 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-blue-500 hover:bg-gray-700/50 transition-all group"
+                      >
+                        <div className="w-12 h-12 flex items-center justify-center">
+                          <img
+                            src={skill.icon}
+                            alt={skill.name}
+                            className="w-full h-full object-contain group-hover:scale-110 transition-transform"
+                          />
+                        </div>
+                        <span className="text-xs text-gray-300 text-center font-medium">
+                          {skill.name}
+                        </span>
+                      </div>
+                    ))}
                   </div>
-                  <span className="text-xs md:text-sm whitespace-nowrap">{skill.name}</span>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
-    </div>
+    </section>
   );
 };
