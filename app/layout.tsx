@@ -10,13 +10,15 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const siteDescription =
+  "Vinit Yadav – Software Engineer building scalable full-stack applications using Java, .NET, React, Node.js, and modern cloud technologies. View projects, experience, and portfolio.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://vinityadav.dev"),
 
   title: "Vinit Yadav | Software Engineer | Full Stack Developer",
 
-  description:
-    "Portfolio of Vinit Yadav – Full Stack Software Engineer specializing in scalable web applications, distributed systems, and modern cloud architecture using React, Node.js, .NET, and ASP.NET Core.",
+  description: siteDescription,
 
   keywords: [
     "Vinit Yadav",
@@ -34,6 +36,7 @@ export const metadata: Metadata = {
     ".NET Developer",
     "C# Developer",
     "ASP.NET Core Developer",
+    "Java Backend Developer",
     "Backend Developer",
     "Cloud Developer",
     "Distributed Systems Engineer",
@@ -41,10 +44,29 @@ export const metadata: Metadata = {
     "Modern Web Architecture"
   ],
 
+  alternates: {
+    canonical: "https://vinityadav.dev",
+  },
+
+  authors: [{ name: "Vinit Yadav", url: "https://vinityadav.dev" }],
+  creator: "Vinit Yadav",
+  publisher: "Vinit Yadav",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
   openGraph: {
-    title: "Vinit Yadav | Software Engineer",
-    description:
-      "Full Stack Software Engineer building scalable systems with React, Node.js, .NET, and ASP.NET Core.",
+    title: "Vinit Yadav | Software Engineer | Full Stack Developer",
+    description: siteDescription,
     url: "https://vinityadav.dev",
     siteName: "Vinit Yadav Portfolio",
     images: [
@@ -61,9 +83,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Vinit Yadav | Software Engineer",
-    description:
-      "Full Stack Software Engineer specializing in React, Node.js, .NET, and scalable cloud systems.",
+    title: "Vinit Yadav | Software Engineer | Full Stack Developer",
+    description: siteDescription,
     images: ["/logo.png"],
   },
 
@@ -80,6 +101,35 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Vinit Yadav",
+              url: "https://vinityadav.dev",
+              jobTitle: "Software Engineer",
+              alumniOf: {
+                "@type": "CollegeOrUniversity",
+                name: "Northeastern University"
+              },
+              sameAs: [
+                "https://linkedin.com/in/Vinit-Y",
+                "https://github.com/Vinit-Y"
+              ],
+              knowsAbout: [
+                "Java",
+                ".NET",
+                "ASP.NET Core",
+                "React",
+                "Node.js",
+                "Cloud Computing"
+              ]
+            })
+          }}
+        />
+
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
