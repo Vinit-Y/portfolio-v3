@@ -24,7 +24,7 @@ const Experience = () => {
               {/* First Row: Image, Position, Company, Date, Location */}
               <div className="flex flex-row items-center gap-4">
                 <img src={experience.thumbnail} alt={experience.company} className="lg:w-28 md:w-20 w-16 rounded-md shadow-md" />
-                <div className="text-center flex-1">
+                <div className="text-left flex-1">
                   <h1 className='font-bold lg:text-2xl md:text-xl text-base text-blue-600 dark:text-blue-400'>
                     {experience.position}
                   </h1>

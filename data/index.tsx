@@ -89,6 +89,7 @@ export const projects = [
     img: "/projectSVG/p2.png",
     iconLists: ["/projectSVG/javascript.svg", "/projectSVG/aws.svg", "/projectSVG/gcp.svg", "/projectSVG/jest.svg", "/projectSVG/sequelize.svg", "/projectSVG/terraform.svg"],
     link: "https://github.com/Vinit-Y/webapp",
+    featured: true,
   },
   {
     id: 3,
@@ -97,6 +98,7 @@ export const projects = [
     img: "/projectSVG/p3.png",
     iconLists: ["/projectSVG/nextjs.svg", "/projectSVG/tailwindCSS.svg", "/projectSVG/typescript.svg", "/projectSVG/three.svg", "/projectSVG/framermotion.svg", "/projectSVG/sentry.svg"],
     link: "https://github.com/Vinit-Y/portfolio-v3",
+    featured: true,
   },  
   {
     id: 4,
@@ -262,8 +264,17 @@ export const skillsData: SkillCategory[] = [
 ];
 
 export const workExperience = [
-  {
+    {
     id: 1,
+    company: "EMA Wellness",
+    position: "Software Developer",
+    date: "October 2025 - Present",
+    location: "Boston, MA",
+    thumbnail: "/EMAW.png",
+    description: `Designed and implemented 3+ backend features using ASP.NET Core and REST APIs, translating business requirements into validated domain logic supporting core user workflows. Debugged and optimized complex SQL Server data flows using SSMS, resolving production defects across 10+ Jira stories and improving overall system reliability. Increased automated test coverage by ~30% through building and maintaining Testim test suites, reducing manual regression testing and enhancing release confidence across sprint cycles. Collaborated in Agile sprint planning, code reviews, and Azure-based deployments, streamlining release processes and minimizing deployment blockers.`,
+  },
+  {
+    id: 2,
     company: "Commonwealth Financial Network",
     position: "Software Engineer Co-op",
     date: "July 2024 - December 2024",
@@ -273,7 +284,7 @@ export const workExperience = [
     image: "/ShineOnAward.png",
   },
   {
-    id: 2,
+    id: 3,
     company: "Ram LLC",
     position: "Full Stack Developer",
     date: "May 2022 - December 2022",
@@ -282,7 +293,7 @@ export const workExperience = [
     description: `As a Full Stack Developer at Ram LLC, I worked on enhancing the security and performance of web applications by upgrading the authentication system from JWT to OAuth 2.0. I developed and integrated RESTful APIs using Node.js and Express, which improved backend performance and maintainability. I focused on optimizing database interactions using SQL performance techniques and deployed scalable solutions on Azure. I also contributed to DevOps automation by setting up CI/CD workflows with Docker and GitHub Actions, helping reduce release time. My role involved working with both .NET and Spring Boot frameworks to ensure the scalability and stability of enterprise applications.`,
   },
   {
-    id: 3,
+    id: 4,
     company: "Ram LLC",
     position: "Web Development Intern",
     date: "July 2021 - April 2022",

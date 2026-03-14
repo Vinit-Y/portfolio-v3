@@ -3,7 +3,7 @@ import { FloatingNav } from "@/components/ui/FloatingNav";
 import { Grid } from "@/components/Grid";
 import { navItems } from "@/data";
 import Education from "@/components/Education";
-import { RecentProjects } from "@/components/RecentProjects";
+import Projects from "@/components/Projects";
 import { Skills } from '@/components/Skills';
 import Experience from "@/components/Experience";
 import Approach from "@/components/Approach";
@@ -19,7 +19,7 @@ export default function Home() {
         <Education />
         <Experience />
         <Skills />
-        <RecentProjects />
+        <Projects />
         <Approach />
         <Footer />
       </div>
