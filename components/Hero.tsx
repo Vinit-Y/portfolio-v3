@@ -35,24 +35,27 @@ const Hero = () => {
           <img src="/vinit.png" alt="Image of Vinit Yadav" className='rounded-full'/>
           <TextGenerateEffect className="text-center text-[36px] md:text-4xl lg:text-5xl xl:text-6xl font-bold" words="Hi👋, I&apos;m  Vinit Yadav" duration={1.5} filter={true}/>
           <p className="text-center md:tracking-wider m-5 text-sm md:text-lg lg:text-xl xl:text-2xl">Welcome! Whether you&apos;re here to get inspired ✨, collaborate 🤝, or just explore 🔍, I hope you find something valuable. Feel free to browse my work 💻, check out my projects 🚀, and reach out—let&apos;s connect! 📩</p>
-            <div className="flex space-x-4">
-              <a>
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+              <a className="w-full sm:w-auto">
               <MagicButton 
                 title="View Resume" 
                 icon={<PiReadCvLogoBold />}
                 handleClick={handleResumeClick}
+                otherClasses="w-full sm:min-w-[160px] justify-center"
               />
               </a>
-              <a href="#about" className="hidden md:inline">
+              <a href="#about" className="hidden md:inline md:w-auto">
               <MagicButton 
                 title="About Me" 
                 icon={<IoPersonCircleOutline />}
+                otherClasses="w-full sm:min-w-[160px] justify-center"
               />
               </a>
-              <a href="https://www.linkedin.com/in/Vinit-Y" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/Vinit-Y" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <MagicButton 
                 title="LinkedIn" 
                 icon={<FaLinkedin />}
+                otherClasses="w-full sm:min-w-[160px] justify-center"
               />
               </a>
             </div>
