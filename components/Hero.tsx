@@ -5,6 +5,7 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import { MagicButton } from './ui/MagicButton'
 import { PiReadCvLogoBold } from 'react-icons/pi'
 import { IoPersonCircleOutline } from 'react-icons/io5';
+import { FaLinkedin } from 'react-icons/fa';
 
 const Hero = () => {
 
@@ -46,6 +47,12 @@ const Hero = () => {
               <MagicButton 
                 title="About Me" 
                 icon={<IoPersonCircleOutline />}
+              />
+              </a>
+              <a href="https://www.linkedin.com/in/Vinit-Y" target="_blank" rel="noopener noreferrer">
+              <MagicButton 
+                title="LinkedIn" 
+                icon={<FaLinkedin />}
               />
               </a>
             </div>

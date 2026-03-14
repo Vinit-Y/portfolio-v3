@@ -311,7 +311,7 @@ export const socialMedia = [
   {
     id: 1,
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/Vinit-Ya",
+    link: "https://www.linkedin.com/in/Vinit-Y",
     icon: FaLinkedin,
   },
   {
